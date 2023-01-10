@@ -10,7 +10,7 @@ import com.example.ejercicionavigationcomponentobjetokotlin.R
 import com.example.ejercicionavigationcomponentobjetokotlin.databinding.FragmentFinalBinding
 import com.example.ejercicionavigationcomponentobjetokotlin.databinding.FragmentSegundoBinding
 
-//Creamos la clase SegundoFragmento que extiende de Fragment que representa una interfaz particular
+//Creamos la clase FinalFragmento que extiende de Fragment que representa una interfaz particular
 // que se ejecuta dentro de un Activity
 class FinalFragment : Fragment() {
     //Creamos el binding que nos sirve para la vinculacion de vista
@@ -40,7 +40,7 @@ class FinalFragment : Fragment() {
         //con su vista, cuando se pulsa el botón, navegamos a un destino desde el gráfico de
         //navegación actual
         binding.btVolverInicio.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_finalFragment_to_inicioFragment)
+            Navigation.findNavController(it).navigate(R.id.action_finalFragment_to_inicioFragment)
         }
     }
 }

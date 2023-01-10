@@ -46,17 +46,17 @@ class InicioFragment : Fragment() {
             //Si los editText en la vista están vacíos, nos muestra un aviso con el texto
             //introducido, sino lo que hace es guardar en un objeto persona nuevo los
             //editText de la vista puesto que son los atributos del objeto persona
-            if (binding.edNombre.getText().toString().isEmpty() || binding.edApellidos.getText()
-                    .toString().isEmpty() || binding.edTelefono.getText().toString().isEmpty()) {
+            if (binding.edNombre.text.toString().isEmpty() || binding.edApellidos.text
+                    .toString().isEmpty() || binding.edTelefono.text.toString().isEmpty()) {
                 Toast.makeText(context, "Debes introducir valores en todos los campos", Toast.LENGTH_SHORT).show()
             } else {
                 //Creamos un objeto persona, capturando los valores de los EditText
-                val registro = Persona(binding.edNombre.getText().toString(), binding.edApellidos.getText().toString(),
-                    binding.edTelefono.getText().toString().toInt()
+                val registro = Persona(binding.edNombre.text.toString(), binding.edApellidos.text.toString(),
+                    binding.edTelefono.text.toString().toInt()
                 )
 
                 //Creamos un objeto de tipo Bundle en el que guardamos el objeto persona que queremos
-                //mandar a la siguiente activity
+                //mandar a la siguiente fragmento
                 val bundle = Bundle()
                 bundle.putParcelable("persona", registro)
 

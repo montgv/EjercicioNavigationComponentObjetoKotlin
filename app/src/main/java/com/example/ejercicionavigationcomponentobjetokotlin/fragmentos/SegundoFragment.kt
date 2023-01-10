@@ -48,7 +48,7 @@ class SegundoFragment : Fragment() {
             val registro: Persona? = arguments?.getParcelable("persona")
 
             //Asignamos a las variables TextView que muestren los datos del objeto persona que
-            //hemos mandado con bundle de la otra activity
+            //hemos mandado con bundle del otro fragmento
             binding.txtNombre.text = "El nombre es: " + registro?.nombre
             binding.txtApellido.text = "Los apellidos son: " + registro?.apellidos
             binding.txtTelefono.text = "El telefono es: " + registro?.telefono
