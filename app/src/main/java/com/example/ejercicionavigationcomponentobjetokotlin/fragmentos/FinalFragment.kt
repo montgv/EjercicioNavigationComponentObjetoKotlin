@@ -13,6 +13,7 @@ import com.example.ejercicionavigationcomponentobjetokotlin.databinding.Fragment
 //Creamos la clase SegundoFragmento que extiende de Fragment que representa una interfaz particular
 // que se ejecuta dentro de un Activity
 class FinalFragment : Fragment() {
+    //Creamos el binding que nos sirve para la vinculacion de vista
     private lateinit var binding: FragmentFinalBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +25,7 @@ class FinalFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //Estas lineas hace que se nos vincule las vistas con el fragmento
         binding = FragmentFinalBinding.inflate(layoutInflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
